@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+      - mongodb
+      - postgres
+
+  redis:
+    image: redis
+
+  mongodb:
+    image: mongo
+    ports:
+      - "27018:27017"
+
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: ims
+    ports:
+      - "5432:5432"
