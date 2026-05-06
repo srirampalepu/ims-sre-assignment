@@ -69,6 +69,7 @@ MongoDB (Signal Storage)
 ### 1. Clone the repository
 
 git clone https://github.com/srirampalepu/ims-sre-assignment
+
 cd ims-sre-assignment
 
 ---
